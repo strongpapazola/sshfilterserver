@@ -1,0 +1,11 @@
+[Unit]
+Description=SSHFilter Service
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+User=root
+ExecStart=/bin/bash /opt/sshfilter/sshfilter.sh
+
+[Install]
+WantedBy=multi-user.target
